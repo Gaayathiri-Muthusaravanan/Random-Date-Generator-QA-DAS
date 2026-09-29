@@ -1,0 +1,109 @@
+Project Name,Random Date Generator,,,,,,,
+URL,https://codebeautify.org/generate-random-date,,,,,,,
+Testing Type,Manual Testing,,,,,,,
+Tester,Gaayathiri,,,,,,,
+,,,,,,,,
+Test Case ID,Test Scenario,Test Case Description,Preconditions,Test Steps,Test Data,Expected Result ,Actual Result,Status
+,,,,,,,,
+TC-001,Generate a date using a valid date range,Verify one date can be generated using a valid start and end date.,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number of dates: 1
+Format: MM-DD-YYYY
+Start: 01-01-2026
+End: 01-31-2026","One date should be generated, and the generated date should be between 01-01-2026 and 01-31-2026",01-02-2026 one date generated,Pass
+TC-002,Generate a date using a valid date range,Verify multiple dates can be generated within a valid date range,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number of dates: 5
+Format: MM-DD-YYYY
+Start: 01-01-2026
+End: 01-31-2026","Exactly 5 dates should be generated, and every date should fall within the specified range","01-01-2026
+01-18-2026
+01-02-2026
+01-24-2026
+01-05-2026 exactly 5 dates generated",Pass
+TC-003,Generate dates using a valid date range with different output formats,Verify date generation using MM-DD-YYYY format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: MM-DD-YYYY
+Start: 01-01-2026
+End: 01-31-2026",One date is generated within the range and displayed as MM-DD-YYYY,01-27-2026 one date generated in MM-DD-YYYY format,Pass
+TC-004,Generate dates using a valid date range with different output formats,Verify date generation using YYYY-MM-DD hh:mm:ss format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: YYYY-MM-DD hh:mm:ss
+Start: 01-01-2026
+End: 01-31-2026",One date is generated within the range and displayed as YYYY-MM-DD hh:mm:ss,2026-01-26 00:08:55 one date generated in YYYY-MM-DD hh:mm:ss format,Pass
+TC-005,Generate dates using a valid date range with different output formats,Verify date generation using YYYY-DD-MM hh:mm:ss format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: YYYY-DD-MM hh:mm:ss
+Start: 01-01-2026
+End: 01-31-2026",Date is generated within the range and displayed in the selected YYYY-DD-MM hh:mm:ss format,2026-11-01 23:12:11 one date generated in YYYY-DD-MM hh:mm:ss format,Pass
+TC-006,Generate dates using a valid date range with different output formats,Verify date generation using MM-DD-YYYY hh:mm:ss format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: MM-DD-YYYY hh:mm:ss
+Start: 01-01-2026
+End: 01-31-2026",Date is generated within the range and displayed in the selected MM-DD-YYYY hh:mm:ss format,01-16-2026 15:10:18 one date generated in MM-DD-YYYY hh:mm:ss format,Pass
+TC-007,Generate dates using a valid date range with different output formats,Verify date generation using ISO 8601 format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: ISO 8601
+Start: 01-01-2026
+End: 01-31-2026",Date is generated within the range and displayed in valid ISO 8601 format,2026-01-11T03:48:12Z One date generated in ISO 8601 format,Pass
+TC-008,Generate dates using a valid date range with different output formats,Verify date generation using Year Month Date hh:mm:ss format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: Year Month Date hh:mm:ss
+Start: 01-01-2026
+End: 01-31-2026","Date is generated within the range and displayed in the selected Format: Year Month Date hh:mm:ss
+",2026 January 24 14:46:59 one date is generated in Year Month Date hh:mm:ss format,
+TC-009,Generate dates using a valid date range with different output formats,Verify date generation using Year Date Month hh:mm:ss format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: Year Date Month hh:mm:ss
+Start: 01-01-2026
+End: 01-31-2026",Date is generated within the range and displayed in the selected Format: Year Date Month hh:mm:ss,2026 January 19 19:31:03 one date generated with wrong format ,Fail
+TC-010,Generate dates using a valid date range with different output formats,Verify date generation using Month Date Year hh:mm:ss format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Format: Month Date Year hh:mm:ss
+Start: 01-01-2026
+End: 01-31-2026","Date is generated within the range and displayed in the selected Format: Month Date Year hh:mm:ss
+",January 08 2026 02:48:37 one date generated in Month Date Year hh:mm:ss format,Pass
+TC-011,Generate dates using a valid date range with different output formats,Verify date generation using Custom date format,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number: 1
+Custom: YYYY-MM-DD
+Start: 01-01-2026
+End: 01-31-2026",One date should be generated within the specified range and displayed according to the specified custom format.,2026-01-26 00:08:55 one date generated in YYYY-MM-DD hh:mm:ss format,Pass
+TC-012,Generate dates with an invalid number of dates,Verify the system does not accept a negative number of dates,Calendar Date Generator page is open.,"1.Enter number of dates.
+2.Select output format
+3. Enter start date
+4. Enter end date
+5. Generate dates","Number of dates: -1
+Format: MM-DD-YYYY
+Start: 01-01-2026
+End: 01-31-2026",No dates should be generated.,,Pass
